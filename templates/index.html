@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatDog Classification</title>
+</head>
+<body>
+  <div>
+    <h1>CatDog Classification</h1>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+      <input type="file" name="my_image" id="pwd">
+      <button type="submit" name="submit"id="pwd">Upload</button>
+    </form>
+
+    {% if prediction %}
+      <img src="{{ img_path }}" width= "300px", height= "300px">
+      <h2>Prediksi mu : <i>{{ prediction }}</i></h2>
+      
+    {% endif %}
+  </div>
+</body>
+</html>
